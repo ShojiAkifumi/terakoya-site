@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* --------------------------------------------------
+    COMMON
+-------------------------------------------------- */
+html { overflow-x: hidden; }
+body, p {
+	line-height: 1.8rem !important;
+	overflow-x: hidden;
+}
+.border { border-width: 2px !important; }
+.bg-white_y   { background: #f9f8ef; }
+.bg-lightblue {	background: #ddffdd; }
+.bg-green     { background: #2dd62a; }
+.text-color   { background: #FFC042; }
+/* --------------------------------------------------
+    ロード画面
+-------------------------------------------------- */
+/* 非表示 */
+.is-hide {
+    display: none;
+}
+/* ローディング画面をフェードアウト */
+.fadeout-bg {
+    transition-property: opacity;
+    transition-delay: .9s;
+    transition-duration: .8s;
+    opacity: 0;
+    pointer-events: none;
+}
+/* ローダーをフェードアウト */
+.fadeout-loader {
+    transition-property: opacity;
+    transition-delay: .9s;
+    transition-duration: .3s;
+    opacity: 0;
+    pointer-events: none;
+}
+/* ローディング画面 */
+#loader-bg {
+    background: #ffffff;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+#loader {
+    height: 30%;
+    left: 45%;
+    /* margin-left: -60px;
+    margin-top: -60px; */
+    position: fixed;
+    top: 40%;
+    width: 30%;
+}
+#loader img {
+	width: 30%;
+	display: inline-block;
+}
+#loader-animation{
+	animation:3s linear infinite rotation1;
+  }
+@keyframes rotation1{
+	0%{ transform:rotate(0);}
+	100%{ transform:rotate(360deg); }
+  }
+
+/* 半円背景各種
+-------------------------------------------------- */
+/* 半月（背景白） */
+.half-white:after { background-color: #f9f8ef; }
+/* 半月（背景薄青） */
+.half-lightblue:after { background: #ddffdd; }
+/* 半月（背景緑） */
+.half-info:after { background: #2dd62a; }
+/* 共通 */
+.half {
+    width: 120%;
+    height: 150px;
+    border-top-left-radius: 50% 120px;
+    border-top-right-radius: 50% 120px;
+    position: absolute;
+    top: 0;
+    left: -10%;   
+}
+.half:after {
+	content: ' ';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;    
+}
+
+/* 見出し丸
+-------------------------------------------------- */
+.dot {
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
+}
+.dot:before, .dot:after {
+	font-family: "Font Awesome 5 Free";/*忘れずに*/
+	content: "\f111";/*アイコンのユニコード*/
+	font-size: 1.2rem;/*サイズ*/
+	color: #FFC042;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+/* --------------------------------------------------
+    header
+-------------------------------------------------- */
+header .container-fluid {
+	height: 120vh;
+	width: 100%;
+	background: url(../img/image-top.jpg);	
+	background-size: cover;
+	background-position: 50% 100%;
+}
+
+.facebook {
+	font-size: 40px;
+	position: fixed;
+    top: 20px;
+	right: 20px;
+	z-index: 2;
+}
+
+.catch-copy span{
+	display: inline-block;
+}
+/*    グローバルナビ
+-------------------------------------------------- */
+.breadcrumb {
+	background: transparent;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	content: '>';
+	color: #f9f8ef;
+}
+li span{
+	display: inline-block;
+}
+/* --------------------------------------------------
+    トップページ
+-------------------------------------------------- */
+.balloon {
+	width: 130px;
+	height: 130px;
+	top: -50px;
+	z-index: 10;
+	left: -20px;
+	font-size: 15px;
+}
+.balloon-s {
+	width: 110px;
+	height: 110px;
+	top: -20px;
+	z-index: 10;
+	left: -20px;
+	font-size: 14px;
+}
+.balloon:before, .balloon-s:before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+	margin-top: -15px;
+	border: 10px solid transparent;
+	border-left: 30px solid #2dd62a;
+	z-index: 0;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+table tr:last-child {
+	border-bottom: 1px solid #dee2e6;
+}
+table tr:nth-child(even) {
+	background-color: #f2fff2;
+}
+table tr:nth-child(odd) {
+	background-color: #def2de;
+}
+
+.season {
+	width: 70px;
+	height: 70px;
+	left: 10px;
+	padding: 0.34em;
+}
+.season div {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 2.4px dotted #f9f8ef;
+}
+.title {
+	border-bottom: 2px solid #071a06;
+}
+.stripe {
+	background: repeating-linear-gradient(90deg, #f9f8ef 0, #f9f8ef 40%, #2dd62a 40%, #2dd62a 60%, #f9f8ef 60%, #f9f8ef 70%);
+}
+.btn {
+	background-color: #2dd62a;
+	
+}
+.h6 p{
+	margin: 1em auto;
+	text-align: center;
+	width:78%;
+}
+.h6 p span{
+	display: inline-block;
+}
+/* --------- ロボット画像 ------- */
+.robo-img{
+	margin: auto;
+	padding-bottom: 15px;
+    width:  70%;
+    height: 70%;
+}
+.robo-img img{
+	border-radius: 50%;
+}
+/* --------- お知らせ ------- */
+.info p{
+	text-align: center;
+}
+/* ---------マップ ----------*/
+.map iframe{
+	width: 90%;
+	text-align: center;
+}
+.access{
+	padding-bottom: 100px;
+}
+.access h3{
+	padding-bottom: 1em;
+}
+.access p{
+	margin: auto;
+	padding-bottom: 1em;
+	font-size: 20px;
+	width: 80%;
+}
+.access p span{
+	display: inline-block;
+}
+.col-lg-6 {
+	margin: 10px 0;
+}
