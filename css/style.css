@@ -12,6 +12,7 @@ body,
 p {
     line-height: 1.8rem !important;
     overflow-x: hidden;
+    font-family: 'Sawarabi Gothic', sans-serif;
 }
 
 .border {
