@@ -35,6 +35,12 @@ p {
     background: #FFC042;
 }
 
+.about {
+    font-size: 1.1em;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
 
 /* --------------------------------------------------
     ロード画面
